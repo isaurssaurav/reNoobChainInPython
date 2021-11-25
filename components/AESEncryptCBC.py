@@ -4,7 +4,6 @@ import hashlib
 
 
 class AESEncryptCBC:
-    key = None
 
     def encrypt(self, data_str, secret_key):
         try:
