@@ -6,13 +6,6 @@ import hashlib
 class AESEncryptCBC:
     key = None
 
-    def set_key(self, key):
-        try:
-            self.key = convert_to_sha256(key)
-        except Exception as e:
-            print('Error while setting key')
-            print(e)
-
     def encrypt(self, data_str, secret_key):
         try:
             cipher = AES.new(secret_key.encode("utf8"), AES.MODE_CBC,'This is an IV456'.encode("utf8"))
