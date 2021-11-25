@@ -1,2 +1,2 @@
 DIFFICULTY = 5
-SECRET_KEY = 'This is secret key'
+SECRET_KEY = 'this is somethin'

@@ -1,7 +1,8 @@
 from components.utils import get_difficulty_string,print_message
 from env import DIFFICULTY, SECRET_KEY
+from .AESEncryptCBC import AESEncryptCBC
 
-
+aesCBC = AESEncryptCBC()
 class Blockchain:
 
     def __init__(self):
@@ -33,6 +34,6 @@ class Blockchain:
 
         return True
 
-    def show_data(self,aes):
+    def show_data(self):
         for block in self.blocks:
-            print_message(aes.decrypt(block.data,SECRET_KEY))
+            print_message(aesCBC.decrypt(block.data,SECRET_KEY))
